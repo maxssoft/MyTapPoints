@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation android:id="@+id/nav_graph"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/PointsQueryFragment">
+
+    <fragment
+        android:id="@+id/PointsQueryFragment"
+        android:name="com.maxssoft.mytappoints.presentation.screen.query.PointsQueryFragment"
+        android:label="@string/point_query_fragment_label"
+        tools:layout="@layout/fragment_points_query">
+        <action
+            android:id="@+id/action_points"
+            app:destination="@id/PointsFragment" >
+            <argument android:name="queryCount" app:argType="integer" />
+        </action>
+        <action
+            android:id="@+id/action_points_loading_error"
+            app:destination="@id/PointsErrorFragment" >
+            <argument android:name="errorText" app:argType="string" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/PointsFragment"
+        android:name="com.maxssoft.mytappoints.presentation.screen.pointlist.PointsFragment"
+        android:label="@string/points_fragment_label"
+        tools:layout="@layout/fragment_points">
+        <argument android:name="queryCount" app:argType="integer" android:defaultValue="100"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/PointsErrorFragment"
+        android:name="com.maxssoft.mytappoints.presentation.screen.error.PointsErrorFragment"
+        android:label="@string/points_error_fragment_label"
+        tools:layout="@layout/fragment_points_error">
+        <argument android:name="errorText" app:argType="string" android:defaultValue="Internal unknown error"/>
+    </fragment>
+</navigation>

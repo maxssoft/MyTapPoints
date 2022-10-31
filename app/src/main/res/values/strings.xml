@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">MyTapPoints</string>
+
+    <string name="point_query_fragment_label">Запрос точек</string>
+    <string name="point_query_count_text">Количество точек</string>
+    <string name="error_query_count_interval">Количество точек должно быть от 1 до 1000</string>
+    <string name="error_query_count_empty">Задайте количество точек</string>
+    <string name="button_run">Поехали</string>
+
+    <string name="points_fragment_label">Список точек</string>
+
+    <string name="points_error_fragment_label">Ошибка загрузки данных</string>
+    <string name="points_error_title">Упс, что то пошло не так(</string>
+    <string name="points_error_details">Подробнее</string>
+    <string name="header_points_chart">График точек</string>
+    <string name="header_points_list">Список точек</string>
+
+</resources>
